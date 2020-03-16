@@ -11,6 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/', 'SingleController@first');
+
+Route::post('/draw', 'SingleController@draw');
+Route::post('/discard/{$number?}', 'SingleController@discard');
